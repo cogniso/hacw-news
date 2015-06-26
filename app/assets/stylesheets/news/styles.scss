@@ -1,3 +1,5 @@
+$margin10: 10px;
+
 div {
 	.vote {
 		display: inline-block;
@@ -9,7 +11,7 @@ div {
 			}
 	
 	.row {
-		margin-top: 20px;
+		margin-top: $margin10*2;
 	}
 	.panel-body {
 		padding: 0;
@@ -40,31 +42,77 @@ div {
 		padding: 5px;
 	}
 	.form-control {
-		margin-bottom: 10px;
+		margin-bottom: $margin10;
 	}
 
 	.btn {
 		width: 100%;
-		margin-bottom: 10px;
+		margin-bottom: $margin10;
 	}
 	.bg-success {
 		border-radius: 5px;
 		height: auto;
 	}
 	.glyphicon {
-		margin-left: 10px;
+		margin-left: $margin10;
 	}	
 	.glyphicon {
-		margin-left: 10px;
+		margin-left: $margin10;
 	}
 	img	{
 		width: 100px;
 	}
+	.submit-form {
+		margin-top: $margin10;
+	}
+	legend {
+		text-align: center;
+		margin-top: $margin10;
+	}
+	textarea {
+		display: block;
+	}
+	.bg-info {
+		padding: $margin10*1.5;
+	}
+	.social {
+		ul{
+			display: inline-block;
+			padding: 0;
+			li {
+				text-decoration: none;
+				list-style-type: none;
+				display: inline-block;
+			}
+		}
+		i {
+			border-radius: 50%;
+			background: black;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			padding-top: 12px; 
+		}
+	}
+	fieldset {
+		border-radius: 9px;
+	}
+
+}
+
+
+.btn-submit-article {
+	margin-top: $margin10*1.5;
+}
+
+.terms-and-conditions {
+	font-size: 15px;
+	font-weight: normal;
 }
 
 h1 {
 	text-align: center;
 	@extend .panel-body;
-	margin-bottom: 5px;
+	margin-bottom: $margin10/2;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }

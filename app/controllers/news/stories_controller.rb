@@ -6,6 +6,14 @@ module News
       @stories = Story.all
     end
 
+    def new
+      @story = Story.new
+    end
+
+    def show
+      @story = Story.find(params[:id])
+    end
+
     # Creates a few random stories to get us going
     def seed
       20.times do |n|

@@ -1,5 +1,7 @@
-- Add up / downvote arrows
-- Make the points in between the arrows
-- Show the date that the story was submitted
-- Make the picture link to the URL
+First part
+
+* Add up / downvote arrows
+* Make the points in between the arrows
+* Show the date that the story was submitted
+* Make the picture link to the URL
 

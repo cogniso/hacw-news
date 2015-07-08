@@ -3,7 +3,7 @@ require 'faker'
 module News
   class StoriesController < ApplicationController
     def index
-      @stories = Story.all
+      @stories = Story.order('points DESC').all
     end
 
     def new
@@ -12,6 +12,17 @@ module News
 
     def show
       @story = Story.find(params[:id])
+    end
+
+    def vote
+      direction = params[:direction].downcase.to_sym
+      unless [:up,:down].include? direction
+        raise "Vote must be either up or down"
+      end
+
+      @story = Story.find(params[:id])
+      @story.vote!(direction)
+      redirect_to story_path(@story)
     end
 
     # Creates a few random stories to get us going

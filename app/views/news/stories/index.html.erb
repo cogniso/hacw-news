@@ -1,68 +1,39 @@
-<!-- <ul>
-  <% @stories.each do |story| %>
-    <li>
-      <img src="<%= story.image %>" />
-      <a href="#"><%= story.title %></a> 
-      (<%= story.points %> credits)
-    </li>
-  <% end %>
-</ul>
--->
+
+
+
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-8">
-    	<% @stories.each do |story| %>
-      	<div class="panel panel-default">
+    <div class="col-sm-10 col-md-offset-1">
 
-        	<div class="panel-heading">
-            	<a href="#"><%= story.title %></a>
-          	</div> <!-- .panel-heading -->
-          	<div class="panel-body bg-info">
-            	<div class="vote">														
-					<span class="glyphicon glyphicon-chevron-up arrow"></span>
-						<%= story.points %>								
-					<span class="glyphicon glyphicon-chevron-down arrow"></span>
-				</div><!-- .vote -->
-				<a href="#">
-					<img src="<%= story.image %>"/>
-				</a>
-            	<a href="">Comments</a>
-            	<div class="submit_date">
-            		<strong>Submited:</strong> <%= story.created_at %>
-            	</div><!-- submite_time -->
-	            <div class="social">	
-	            	<ul>
-				        <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-				        <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-				        <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a>
-					</ul>
-				</div><!-- .social -->
-          	</div><!-- .panel-body -->
-        </div><!-- .panel .panel-default -->
-        <% end %>
+      <p class="story-count">
+        <span>There are <%= @stories.length * 2 %> stories</span>
+      </p>
+    	
 
-    </div><!-- .col-sm-8 -->
+      <% @stories.each do |story| %>
+      	<div class="story-box">
+          <div class="story-box-vote">														
+				     <span class="glyphicon glyphicon-chevron-up story-box-vote-arrow"></span>
+					    <%= story.points %>								
+				     <span class="glyphicon glyphicon-chevron-down story-box-vote-arrow"></span>
+			    </div><!-- .story-box-vote -->
 
-    	<div class="col-sm-4 bg-success right-sidebar">
+			    <a href="#">
+				     <img class="story-box-image" src="<%= story.image %>"/>
+			    </a>
 
-      		<input type="search" placeholder="Search HACW" class="search">
-      		<span type="submit" class="glyphicon glyphicon-search"></span>
+          <div class="story-box-details">           
+            <h3>
+              <a href="<%= story_path(story) %>"><%= story.title %></a>
+            </h3>
+            <a href="#">Comments</a>
 
-      		<div class="form-group">
-        		<h4>Please log in</h4> 
-		        <label for="username" class="label"></label>
-		        <input type="text" class="form-control" id="username" placeholder="Username">
+            <strong>Submited:</strong> <%= time_ago_in_words(story.created_at) %> ago
+          </div><!-- .story-box-details -->	
+        </div><!-- .story-box -->
+      <% end %>
 
-		        <label for="password" class="label"></label>
-		        <input type="password" class="form-control" id="password" placeholder="Password">
-
-		        <input class="btn btn-info"  type="submit" value="Sing in">
-		        <input class="btn btn-success" type="sign-up" value="Sign up">
-      		</div><!-- .form-group -->
-
-      <a href="/news/submit" class="btn btn-warning">Submit a new link</a>
-
-    </div><!-- col-sm-4 -->
+    </div><!-- .col-sm-10 -->	
   </div><!-- .row -->
 </div><!-- .container -->

@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gear",
+				"gear_num"
+			],
+			[
+				"fuel",
+				"fuel_level"
+			],
+			[
+				"fue",
+				"fuel_level"
+			],
+			[
+				"en",
+				"engine_running"
+			],
+			[
+				"st",
+				"start_engine"
+			],
+			[
+				"ve",
+				"Vehicle"
+			],
+			[
+				"re",
+				"release_handbrake"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"patent",
+				"patent"
+			],
+			[
+				"in",
+				"in_order"
+			],
+			[
+				"year",
+				"year_order"
+			],
+			[
+				"invento",
+				"invention_year"
+			],
+			[
+				"inven",
+				"invention_year"
+			],
+			[
+				"pat",
+				"patent_number"
+			],
+			[
+				"name",
+				"name_list"
+			],
+			[
+				"nam",
+				"name_list"
+			],
+			[
+				"paten",
+				"patent_name"
+			],
+			[
+				"uni",
+				"unique"
+			],
+			[
+				"ca",
+				"capitalized"
+			],
+			[
+				"topi",
+				"topics_array"
+			],
+			[
+				"tpi",
+				"topics_array"
+			],
+			[
+				"topic",
+				"topics"
+			],
+			[
+				"mov",
+				"movies"
+			],
+			[
+				"p",
+				"puts"
+			],
+			[
+				"am",
+				"amount"
+			],
+			[
+				"array",
+				"arraynum"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"li",
+				"link	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Convert Case: Title Case"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/fardin/Projects/test folder/vehicle_2.rb",
+		"/Users/fardin/Projects/test folder/vehicle.rb",
+		"/Users/fardin/Projects/test folder/television.rb",
+		"/Users/fardin/Projects/sample_app/app/views/layouts/application.html.erb",
+		"/Users/fardin/Projects/sample_app/app/helpers/application_helper.rb",
+		"/Users/fardin/Projects/sample_app/app/views/static_pages/home.html.erb",
+		"/Users/fardin/Projects/sample_app/app/views/static_pages/about.html.erb",
+		"/Users/fardin/Projects/sample_app/config/routes.rb",
+		"/Users/fardin/Projects/sample_app/app/controllers/static_pages_controller.rb",
+		"/Users/fardin/Projects/sample_app/app/views/static_pages/help.html.erb",
+		"/Users/fardin/Projects/sample_app/test/controllers/static_pages_controller_test.rb",
+		"/Users/fardin/Projects/sample_app/app/assets/stylesheets/static_pages.scss",
+		"/Users/fardin/Projects/sample_app/app/assets/stylesheets/application.css",
+		"/Users/fardin/Projects/hacw-news/app/views/news/stories/show.html.erb",
+		"/Users/fardin/Projects/hacw-news/app/views/news/stories/index.html.erb",
+		"/Users/fardin/Projects/hacw-news/app/views/news/stories/new.html.erb",
+		"/Users/fardin/Projects/hacw-news/app/controllers/news/stories_controller.rb",
+		"/Users/fardin/Projects/hacw-news/app/controllers/news/application_controller.rb",
+		"/Users/fardin/Projects/hacw-news/app/views/layouts/news/application.html.erb",
+		"/Users/fardin/Projects/sample_app/app/controllers/application_controller.rb",
+		"/Users/fardin/test folder/toy_app/app/models/user.rb",
+		"/Users/fardin/test folder/toy_app/app/models/micropost.rb",
+		"/Users/fardin/test folder/toy_app/Gemfile",
+		"/Users/fardin/Projects/hacw-news/config/routes.rb",
+		"/Users/fardin/test folder/toy_app/app/controllers/microposts_controller.rb",
+		"/Users/fardin/test folder/toy_app/app/controllers/users_controller.rb",
+		"/Users/fardin/Projects/hacw-news/app/models/news/story.rb",
+		"/Users/fardin/test folder/just_testing/config/routes.rb",
+		"/Users/fardin/test folder/just_testing/app/models/micropost.rb",
+		"/Users/fardin/Projects/hacw-news/news.gemspec",
+		"/Users/fardin/Projects/hacw-news/db/migrate/20150626072338_create_news_stories.rb",
+		"/Users/fardin/test folder/movies.rb",
+		"/Users/fardin/test folder/toy_app/app/views/users/new.html.erb",
+		"/Users/fardin/test folder/toy_app/app/views/users/index.html.erb",
+		"/Users/fardin/test folder/toy_app/app/views/users/_form.html.erb",
+		"/Users/fardin/test folder/toy_app/app/views/users/edit.html.erb",
+		"/Users/fardin/test folder/first_app/app/views/layouts/application.html.erb",
+		"/Users/fardin/test folder/codecademy.rb",
+		"/Users/fardin/test folder/hello_app/app/views/layouts/application.html.erb",
+		"/Users/fardin/test folder/toy_app/app/views/users/index.json.jbuilder",
+		"/Users/fardin/test folder/toy_app/app/views/users/show.html.erb",
+		"/Users/fardin/test folder/toy_app/app/views/users/show.json.jbuilder",
+		"/Users/fardin/test folder/just_testing/app/views/users/index.json.jbuilder",
+		"/Users/fardin/test folder/just_testing/app/views/users/index.html.erb",
+		"/Users/fardin/test folder/just_testing/app/views/users/edit.html.erb",
+		"/Users/fardin/test folder/just_testing/app/views/users/_form.html.erb",
+		"/Users/fardin/test folder/toy_app/app/assets/stylesheets/application.css",
+		"/Users/fardin/test folder/toy_app/app/views/layouts/application.html.erb",
+		"/Users/fardin/test folder/toy_app/db/migrate/20150704120219_create_users.rb",
+		"/Users/fardin/Projects/hacw-news/app/models/news/news.rb",
+		"/Users/fardin/Projects/hacw-news/app/views/news/stories/def nam.rb",
+		"/Users/fardin/test folder/testhello.rb",
+		"/Users/fardin/test folder/toy_app/app/controllers/application_controller.rb",
+		"/Users/fardin/test folder/hello_app/app/controllers/application_controller.rb",
+		"/Users/fardin/test folder/hello_app/config/routes.rb",
+		"/Users/fardin/test folder/hello_app/app/assets/stylesheets/application.css",
+		"/Users/fardin/test folder/methods/age.rb",
+		"/Users/fardin/test folder/methods.rb",
+		"/Users/fardin/test folder/arrays.rb",
+		"/Users/fardin/Projects/hacw-news/test/news_test.rb",
+		"/Users/fardin/Projects/hacw-news/test/dummy/app/views/layouts/application.html.erb",
+		"/Users/fardin/test folder/methods/bank_account_ownclass.rb",
+		"/Users/fardin/Projects/hacw-news/app/assets/stylesheets/news/styles.scss",
+		"/Users/fardin/Dropbox/Dell-desktop/Work-Projects/Coding/sign up form.htm",
+		"/Users/fardin/patent-posters/Sass/styles.css",
+		"/Users/fardin/Projects/car-news/index.html",
+		"/Users/fardin/patent-posters/index.html",
+		"/Users/fardin/patent-posters/styles.css",
+		"/Users/fardin/Projects/car-news/styles.scss",
+		"/Users/fardin/Projects/car-news/styles.css",
+		"/Users/fardin/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/fardin/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/fardin/Projects/car-news/styles.css.map",
+		"/Users/fardin/patent-posters/Sass/styles.scss",
+		"/Users/fardin/Dropbox/Dell-desktop/Work-Projects/Coding/Projects/HACW-news-section/index.htm",
+		"/Users/fardin/Dropbox/Dell-desktop/Work-Projects/Coding/Projects/HACW-news-section/submit_new_link.htm",
+		"/Users/fardin/Dropbox/Dell desktop/Work Projects/Coding/sign up form.htm"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";\n",
+			"label\n",
+			":\n",
+			"margin10",
+			"padding",
+			"search",
+			"glyp",
+			"side",
+			"arrow",
+			"display",
+			"name",
+			"fieldset",
+			"<h3>Submit your story here<h3>",
+			"20px",
+			".btn",
+			"(\"<%=",
+			";\n",
+			"comment",
+			"$white",
+			"browser"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true
+}

@@ -1,121 +1,65 @@
-$margin10: 10px;
 
-div {
-	.vote {
-		display: inline-block;
-	}
-	 
-		.arrow {
-			display: block;
-			margin: 0;
-			}
-	
-	.row {
-		margin-top: $margin10*2;
-	}
-	.panel-body {
-		padding: 0;
-	}
-	.panel {
-		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-		&:hover {
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  			transition: box-shadow 250ms;
-		}
-	}
-	.right-sidebar {
-		@extend .panel;
-		position: fixed;
-		right: 10px;
-	}
-	.submit_date {
-		display: inline-block;
-		font-size: 12px;
-	}
-	.glyphicon-search {
-		@extend .row;
-	}
-	.search {
-		width: 90%;
-		border: 1px solid lightgrey;
-		border-radius: 1px;
-		padding: 5px;
-	}
-	.form-control {
-		margin-bottom: $margin10;
-	}
+// This is the spacing between blocks
+// Sometimes we use 50% and sometimes 200% of it.
 
-	.btn {
-		width: 100%;
-		margin-bottom: $margin10;
+body {
+	background-color: #eaeaea;
+}
+
+// To centre this content we have to wrap
+// the span in a div and make it inline-block.  
+// Thanks CSS!
+.story-count {
+	text-align: center;
+
+	> span {
+		display: inline-block;
+		background-color: white;
+		padding: 5px 10px;
 	}
-	.bg-success {
-		border-radius: 5px;
-		height: auto;
-	}
-	.glyphicon {
-		margin-left: $margin10;
-	}	
-	.glyphicon {
-		margin-left: $margin10;
-	}
-	img	{
-		width: 100px;
-	}
-	.submit-form {
-		margin-top: $margin10;
-	}
-	legend {
+}
+
+.story-box {
+	background-color: #fff;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+  
+  &-vote {
+  		display: inline-block;
+  		vertical-align: middle;
 		text-align: center;
-		margin-top: $margin10;
-	}
-	textarea {
-		display: block;
-	}
-	.bg-info {
-		padding: $margin10*1.5;
-	}
-	.social {
-		ul{
-			display: inline-block;
-			padding: 0;
-			li {
-				text-decoration: none;
-				list-style-type: none;
-				display: inline-block;
-			}
-		}
-		i {
-			border-radius: 50%;
-			background: black;
-			width: 40px;
-			height: 40px;
-			text-align: center;
-			padding-top: 12px; 
-		}
-	}
-	fieldset {
-		border-radius: 9px;
-	}
-	.close {
-		top: 0;
-	}
+		width: 35px;
+  }
 
+  &-image {
+		width: 100px;
+  }
+
+  &-details {
+  	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+
+  }
 }
 
-
-.btn-submit-article {
-	margin-top: $margin10*1.5;
-}
-
-.terms-and-conditions {
-	font-size: 15px;
-	font-weight: normal;
+.good {
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
 }
 
 h1 {
 	text-align: center;
-	@extend .panel-body;
-	margin-bottom: $margin10/2;
+	padding: 0;
+	margin-bottom: 20px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
+.story-box-vote-arrow {
+	font-size: 20px;
+}
+
+.row {
+	margin-top: 20px;
+}
+

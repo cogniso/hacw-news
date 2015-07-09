@@ -15,8 +15,34 @@ require 'test_helper'
 
 module News
   class StoryTest < ActiveSupport::TestCase
-    # test "the truth" do
-    #   assert true
-    # end
+    def setup
+      @story = Story.new(url: 'http://www.google.com', title: 'A title here')
+    end
+
+    test "should be valid" do
+      assert @story.valid?
+    end
+
+    test "URL should be present" do
+      @story.url = ''
+      assert_not @story.valid?
+    end
+
+    test "title should be present" do
+      @story.title = ''
+      assert_not @story.valid?
+    end
+
+    test "voting up adds a point" do
+      @story.points = 10
+      @story.vote!(:up)
+      assert_equal @story.points, 11
+    end
+
+    test "voting down subtracts a point" do
+      @story.points = 10
+      @story.vote!(:down)
+      assert_equal @story.points, 9
+    end
   end
 end

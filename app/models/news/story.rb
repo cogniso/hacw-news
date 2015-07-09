@@ -13,5 +13,16 @@
 
 module News
   class Story < ActiveRecord::Base
+    validates :url, :title, presence: true
+
+    def vote!(direction)
+      change = case direction
+      when :up then 1
+      when :down then -1
+      else return
+      end
+
+      update_attribute(:points, points + change)
+    end
   end
 end

@@ -3,7 +3,8 @@
 // Sometimes we use 50% and sometimes 200% of it.
 
 body {
-	background-color: #eaeaea;
+	background-color: #fafafa;
+	font-family: "Roboto Slab", palatino, serif;
 }
 
 // To centre this content we have to wrap
@@ -66,8 +67,10 @@ body {
 }
 
 .comment-item{
-	background: white;
+	background-color: white;
+  	box-shadow: 0 0 3px rgba(0,0,0,0.2);
 	margin-bottom: 20px;
+	padding-bottom: 15px;
 	&-voting {
 		display: inline-block;
   		vertical-align: middle;
@@ -101,10 +104,28 @@ body {
 		margin-left: 35px;
 		padding-left: 10px;
 	}
+
+	&-voting-reply{
+		text-align: center;
+		vertical-align: middle;
+		.glyphicon-chevron {
+			&-up:before {
+				font-size: 15px;
+			}
+			&-down:before {
+				font-size: 15px;
+			}
+			&-down {
+				margin-top: -10px;
+			}
+		}
+	}
+
 	ul {
 		padding-left: 5px;
 	}
 }
+
 
 .label-info {
 	font-size: 18px;
@@ -114,8 +135,6 @@ body {
 .story-meta {
 	margin-top: 15px;
 }
-
-
 
 
 

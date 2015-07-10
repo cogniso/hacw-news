@@ -2,16 +2,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
+      
       <div class="story-header">
-    
         <%= image_tag @story.image, alt: @story.title %>
         <%= link_to '', '#', class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
         <h1><%= link_to @story.title, @story.url %></h1>
-
         <div class="story-voting">
           <span class="label label-info"><%= @story.points %> points</span>
         </div>
-
         <div class="story-meta">
           Story submitted <%= time_ago_in_words @story.created_at %> ago.
           <h3>Comments</h3>
@@ -26,12 +24,10 @@
               <%= comment.points %>
               <%= link_to '', votes_path(comment_id: comment.id, direction: :down), class: "glyphicon glyphicon-chevron-down story-box-vote-arrow" %>
             </div><!-- comment-item-voting-->
-    
             <div class="comment-item-meta">
               <%= simple_format comment.body %>
               <%= time_ago_in_words(comment.created_at) %> ago        
             </div><!-- comment-item-meta -->
-
             <div class="comment-item-reply">
               <div class="comment-item-voting-reply">
                 <%= link_to '', votes_path(comment_id: comment.id, direction: :up), class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>

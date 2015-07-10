@@ -14,9 +14,6 @@ module News
       @story = Story.find(params[:id])
     end
 
-    def comment
-    end
-
     def vote
       direction = params[:direction].downcase.to_sym
       unless [:up,:down].include? direction

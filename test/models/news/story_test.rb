@@ -28,6 +28,17 @@ module News
       assert_not @story.valid?
     end
 
+    test "URL should be a valid URL" do
+      @story.url = 'somethingcrap'
+      assert_not @story.valid?
+    end
+
+    test "it adds http if needed" do
+      @story.url = 'www.swim.com'
+      assert @story.valid?
+      assert_equal "http://www.swim.com", @story.url
+    end
+
     test "title should be present" do
       @story.title = ''
       assert_not @story.valid?

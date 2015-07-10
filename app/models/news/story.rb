@@ -11,11 +11,26 @@
 #  updated_at :datetime         not null
 #
 
+require 'uri'
+
 module News
   class Story < ActiveRecord::Base
     has_many :comments, -> { where(parent_id: nil) }
 
     validates :url, :title, presence: true
+    validate :validate_url
+    def validate_url
+      # Add HTTP if it's needed
+      url.gsub!(/\Awww\./, 'http://www.')
+      valid = begin
+         uri = URI.parse(url)
+         uri.kind_of?(URI::HTTP)
+      rescue URI::InvalidURIError
+        false
+      end
+      errors.add :url, 'is not a valid URL' unless valid
+    end
+
 
     def vote!(direction)
       change = case direction.to_sym

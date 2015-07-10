@@ -1,60 +1,37 @@
+<div class="container">
+  <h1>Submit a story</h1>
 
-<div class="row">
+  <p>Found something of interest to our community of 200,000 car enthusiasts?  Tell us and we'll
+    share it with everyone.</p>
+  <%= form_for @story do |f| %>
+    <%= error_messages_for @story %>
 
-  <div>type some stuff</div>
-  <table>
-    <tr>
-      <th>Cell 1</th>
-    </tr>
-    <tr>
-      <td>Cell 1</td>
-    </tr>
-    <tr>
-      <td>Cell 1</td>
-    </tr>
-    <tr>
-      <td>Cell 1</td>
-    </tr>
-    <tr>
-      <td>Cell 1</td>
-    </tr>
-    <tr>
-      <td>Cell 1</td>
-    </tr>
-  </table>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :url, "URL of story" %>
+      <%= f.text_field :url, class: 'form-control' %>
+    </div>
+
+    <fieldset>
+      <legend>About you</legend>
+      <div class="form-group">
+        <%= f.label :submitter_name, 'Your name' %>
+        <%= f.text_field :submitter_name, class: 'form-control' %>
+        <p class="help-block">We'll credit you with finding this story. Feel
+          free to leave it blank.</p>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :submitter_email, 'Your email' %>
+        <%= f.text_field :submitter_email, class: 'form-control' %>
+        <p class="help-block">Optional - We'll email you when your link is live</p>
+      </div>
+    </fieldset>
+
+    <%= f.submit 'Submit story', class: 'btn btn-primary' %>
+  <% end %>
 </div>
-
-<div class="row">
-	<div class="col-sm-6 col-md-offset-3">
-		<form>
-			<LEGEND>Post New Article</LEGEND>
-			<fieldset class="bg-info">
-				<div class="form-group submit-form">
-
-					<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<label for="entry_title">Title</label>
-					<input type="text" id="entry_title" name="entry_title" class="form-control" placeholder="Write your article title here">
-				</div><!-- .form-group -->
-
-				<div class="form-group">	
-					<label for="entry_link">Paste your link here</label>
-					<input type="link" id="entry_link" name="entry_link" class="form-control" placeholder="Paste/write URL here">
-
-					<label for="user_comment">Comments</label>
-					<textarea id="user_comment"></textarea>
-				</div><!-- .form-group -->
-
-				<div class="form-group">
-					<label for="inputfile">Choose a file to attach <span style="font-size:11px">(Max. Size: 2MB)</span></label>
-					<input type="file" id="inputfile">
-
-				</div><!-- .form-group -->
-
-				<input type="checkbox"><a href="#" class="terms-and-conditions"> I agree with terms and condition</a>
-
-				<button type="submit" class="btn btn-success btn-submit-article">Submit article</button>
-				<button type="reset" class="btn btn-warning">Reset</button>
-			</fieldset>
-		</form>
-	</div><!--. col-sm-8 -->
-</div><!-- .row -->

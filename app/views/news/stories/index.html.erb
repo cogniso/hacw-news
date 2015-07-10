@@ -1,4 +1,8 @@
 <div class="stories-list">
+  <div class="stories-actions" style="margin-bottom: 20px; text-align: center">
+    <%= link_to 'Submit a story', new_story_path, class: 'btn btn-primary' %>
+  </div>
+    
       <% @stories.each do |story| %>
         <div class="story-item">
           <div class="story-item-voting">
@@ -13,9 +17,7 @@
             <a href="<%= story_path(story) %>">
               <img class="story-item-image" src="<%= story.image %>"/>
             </a>
-            <h3>
-              <%= link_to story.title, story %>
-            </h3>
+            <h3><%= link_to story.title, story %></h3>
             <%= link_to 'Comments', story_path(story, anchor: 'comments') %>
 
             <strong>Submited:</strong> <%= time_ago_in_words(story.created_at) %> ago

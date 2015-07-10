@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150710151545) do
+ActiveRecord::Schema.define(version: 20150710173012) do
 
   create_table "news_comments", force: :cascade do |t|
     t.integer  "story_id"
@@ -32,8 +32,11 @@ ActiveRecord::Schema.define(version: 20150710151545) do
     t.string   "url"
     t.string   "image"
     t.integer  "points"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "submitter_name"
+    t.string   "submitter_email"
+    t.boolean  "approved",        default: false
   end
 
 end

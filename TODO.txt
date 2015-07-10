@@ -1,5 +1,5 @@
-- Increase the size of the upvote arrow on the stories#show
-- Include the comment count on the stories#index
-- Include the comment count on the stories#show page
-- Style the comment form and wrap the controls in bootstrap
+* Increase the size of the upvote arrow on the stories#show
+* Include the comment count on the stories#index
+* Include the comment count on the stories#show page
+* Style the comment form and wrap the controls in bootstrap
   form classes if needed.

@@ -17,10 +17,12 @@
             <a href="<%= story_path(story) %>">
               <img class="story-item-image" src="<%= story.image %>"/>
             </a>
-            <h3><%= link_to story.title, story %></h3>
-            <%= link_to 'Comments', story_path(story, anchor: 'comments') %>
+            <h3>
+              <%= link_to story.title, story %>
+            </h3>
+            <%= link_to pluralize(story.comments.count, 'comment'), story_path(story, anchor: 'comments') %>
 
-            <strong>Submited:</strong> <%= time_ago_in_words(story.created_at) %> ago
+            Submited: <%= time_ago_in_words(story.created_at) %> ago
           </div><!-- .story-item-details -->
         </div><!-- .story-item -->
       <% end %>

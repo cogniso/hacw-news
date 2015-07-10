@@ -11,19 +11,19 @@
 
     <div class="story-meta">
       Story submitted <%= time_ago_in_words @story.created_at %> ago.
-      <h3 id="comments">Comments</h3>
+      <h3 id="comments"><%= pluralize(@story.comments.count, 'comment') %></h3>
     </div><!-- .story-meta -->
   </div><!-- story-header -->
 
   <%= form_for @story.comments.build, html:{ class: 'story-comment-form'} do |f| %>
     <%= f.hidden_field :story_id %>
-    <%= f.text_area :body, placeholder: "Enter your comment here." %>
-    <%= f.submit 'Add comment' %>
+    <%= f.text_area :body, placeholder: "Enter your comment here.", class: 'comment-text-area col-sm-6 col-sm-offset-3'%>
+    <%= f.submit 'Add comment', class: 'btn btn-success add-comment-btn col-sm-6 col-sm-offset-3' %>
   <% end %>
 
   <div class="comments-list">
     <% @story.comments.order('points DESC').each do |comment| %>
-      <%= render comment %>
+    <%= render comment %>
     <% end %>
   </div> <!-- .comments-list -->
 </div>

@@ -1,23 +1,14 @@
-
-
-
-
 <div class="container">
   <div class="row">
     <div class="col-sm-10 col-md-offset-1">
-
-      <p class="story-count">
-        <span>There are <%= @stories.length * 2 %> stories</span>
-      </p>
-    	
-
+ 	
       <% @stories.each do |story| %>
-      	<div class="story-box">
-          <div class="story-box-vote">														
-				     <span class="glyphicon glyphicon-chevron-up story-box-vote-arrow"></span>
-					    <%= story.points %>								
-				     <span class="glyphicon glyphicon-chevron-down story-box-vote-arrow"></span>
-			    </div><!-- .story-box-vote -->
+        <div class="story-box">
+          <div class="story-box-vote">    
+            <%= link_to "", vote_story_path(story, direction: :up), class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
+            <%= story.points %> 
+            <%= link_to "", vote_story_path(story, direction: :down), class: "glyphicon glyphicon-chevron-down story-box-vote-arrow" %>
+          </div><!-- .story-box-vote -->
 
 			    <a href="#">
 				     <img class="story-box-image" src="<%= story.image %>"/>
@@ -27,7 +18,7 @@
             <h3>
               <a href="<%= story_path(story) %>"><%= story.title %></a>
             </h3>
-            <a href="#">Comments</a>
+            <a href="">Comments</a>
 
             <strong>Submited:</strong> <%= time_ago_in_words(story.created_at) %> ago
           </div><!-- .story-box-details -->	

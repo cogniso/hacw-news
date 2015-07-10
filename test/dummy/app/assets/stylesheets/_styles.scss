@@ -23,13 +23,14 @@ body {
 	background-color: #fff;
 	margin-bottom: 20px;
 	border-radius: 3px;
-	box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
   
   &-vote {
   		display: inline-block;
   		vertical-align: middle;
 		text-align: center;
 		width: 35px;
+
   }
 
   &-image {
@@ -43,6 +44,8 @@ body {
 
   }
 }
+
+
 
 .good {
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
@@ -58,10 +61,10 @@ h1 {
 .story-box-vote-arrow {
 	font-size: 20px;
 
-	&:hover {
-		text-decoration: none;
-
-	}
+    &:hover {
+    	text-decoration: none;
+    	color: red;
+    }
 }
 
 .row {

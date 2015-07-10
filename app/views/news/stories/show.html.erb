@@ -20,7 +20,6 @@
 
       <div class="comments-list">
         <% @story.comments.order('points DESC').each do |comment| %>
-        <div class="comment">
           <div class="comment-item">
             <div class="comment-item-voting">
               <%= link_to '', votes_path(comment_id: comment.id, direction: :up), class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
@@ -38,14 +37,13 @@
                 <%= link_to '', votes_path(comment_id: comment.id, direction: :up), class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
                 <%= comment.points %>
                 <%= link_to '', votes_path(comment_id: comment.id, direction: :down), class: "glyphicon glyphicon-chevron-down story-box-vote-arrow" %>
-              </div><!-- comment-item-voting-->
+              </div><!-- comment-item-voting-reply-->
               <ul class="comment-item-reply-list">This is a reply to comments</ul>
             </div><!-- .comment-item-reply -->
           </div><!--comment-item-->
 
-          <% end %>
-          
-        </div> <!--comment-->
+        <% end %>
+
       </div> <!-- .comments-list -->
     </div><!-- .col-sm-6 -->
   </div> <!-- .row -->

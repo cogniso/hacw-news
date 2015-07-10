@@ -64,8 +64,10 @@ body {
 		margin: 25px;
 	}
 }
+
 .comment-item{
 	background: white;
+	margin-bottom: 20px;
 	&-voting {
 		display: inline-block;
   		vertical-align: middle;
@@ -87,10 +89,6 @@ body {
 	a{
 		vertical-align: middle;
 	}
-	
-	.story-meta {
-		margin-top: 10px;
-	}
 
 	&-meta {
 		display: inline-block;
@@ -111,6 +109,10 @@ body {
 .label-info {
 	font-size: 18px;
 	margin-top: 20px;
+}
+
+.story-meta {
+	margin-top: 15px;
 }
 
 

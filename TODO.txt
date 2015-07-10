@@ -1,7 +1,5 @@
-First part
-
-* Add up / downvote arrows
-* Make the points in between the arrows
-* Show the date that the story was submitted
-* Make the picture link to the URL
-
+- Increase the size of the upvote arrow on the stories#show
+- Include the comment count on the stories#index
+- Include the comment count on the stories#show page
+- Style the comment form and wrap the controls in bootstrap
+  form classes if needed.

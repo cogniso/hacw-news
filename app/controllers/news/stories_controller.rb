@@ -28,10 +28,17 @@ module News
         )
 
         rand(0..10).times do |x|
-          story.comments.create!(
+          comment = story.comments.create!(
             body: Faker::Lorem.paragraph(2),
             points: rand(-100..100),
           )
+
+          rand(0..3).times do |y|
+            comment.replies.create!(
+              body: Faker::Lorem.paragraph(rand(1..9)),
+              points: rand(-10..10)
+            )
+          end
         end
       end
       redirect_to root_path

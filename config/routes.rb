@@ -3,9 +3,9 @@ News::Engine.routes.draw do
   get 'seed'=>'stories#seed'
   get 'submit'=>'stories#new'
   get 'new' => 'stories#new'
-  get 'comments' => 'stories#comments'
 
   resources :stories
+  resources :comments, only: [:new, :create]
 
   # resources :votes, only: [:create]
   get '/votes'=> 'votes#create', as: :votes

@@ -1,7 +1,14 @@
 module News
   class Comment < ActiveRecord::Base
-    belongs_to :story
+    acts_as_nested_set
+    alias_method :replies, :children
 
+    before_validation :set_story_id
+    def set_story_id
+      self.story_id = parent.story_id if child?
+    end
+
+    belongs_to :story
     validates :body, :story, presence: true
 
     # Direction will be either up or down

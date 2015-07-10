@@ -1,0 +1,21 @@
+<div class="comment-item">
+  <div class="comment-item-voting">
+    <%= link_to '', votes_path(comment_id: comment.id, direction: :up), class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
+    <%= link_to '', votes_path(comment_id: comment.id, direction: :down), class: "glyphicon glyphicon-chevron-down story-box-vote-arrow" %>
+  </div><!-- comment-item-voting-->
+  <div class="comment-item-details">
+    <div class="comment-item-meta">
+      <%= comment.points %> points
+      <%= time_ago_in_words(comment.created_at) %> ago
+    </div>
+    <%= simple_format comment.body %>
+
+    <%= link_to 'Reply', new_comment_path(reply_to: comment.id) %>
+  </div><!-- comment-item-meta -->
+
+  <div class="comment-replies">
+    <% comment.replies.each do |reply| %>
+      <%= render 'news/comments/comment', comment: reply %>
+    <% end %>
+  </div>
+</div><!--comment-item-->

@@ -51,5 +51,12 @@ module News
       @comment.vote!(:down)
       assert_equal original_points - 1, @comment.points
     end
+
+    test "it has children" do
+      parent_comment = @story.comments.create!(body: 'Some comment')
+      child_comment = parent_comment.replies.create!(body: 'A reply to that')
+      assert_includes parent_comment.replies, child_comment
+      assert_equal child_comment.parent, parent_comment
+    end
   end
 end

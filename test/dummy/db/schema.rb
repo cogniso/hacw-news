@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150710101552) do
+ActiveRecord::Schema.define(version: 20150710151545) do
 
   create_table "news_comments", force: :cascade do |t|
     t.integer  "story_id"
@@ -19,7 +19,13 @@ ActiveRecord::Schema.define(version: 20150710101552) do
     t.integer  "points",     default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
   end
+
+  add_index "news_comments", ["parent_id"], name: "index_news_comments_on_parent_id"
+  add_index "news_comments", ["rgt"], name: "index_news_comments_on_rgt"
 
   create_table "news_stories", force: :cascade do |t|
     t.string   "title"

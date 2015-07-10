@@ -1,0 +1,105 @@
+// Stories index --------------------------
+
+
+// Stories list
+
+.stories-list {
+  width: 85%;
+  margin: 10px auto;
+}
+
+.story-item {
+  overflow: auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+.story-item-voting, .comment-item-voting {
+  width: 5%;
+  min-width: 35px;
+  float: left;
+  text-align: center;
+
+  a {
+    display: block;
+    font-size: 20px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Move this down slightly to vertically align towards the middle
+.story-item-voting {
+  margin-top: 20px;
+}
+
+.story-item-image {
+  width: 100px;
+  float: left;
+}
+
+.story-item-details {
+  overflow: auto;
+}
+
+
+
+
+// Show story page ------------------------------
+
+.story-header {
+  text-align: center;
+
+  a {
+    display: block;
+    margin: 25px;
+  }
+
+  .label-story-points {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .story-meta {
+    margin-top: 15px;
+  }
+}
+
+// Comments
+
+.comment-item {
+  overflow: auto;
+  clear: both;
+}
+
+.comments-list > .comment-item {
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.comment-replies .comment-item {
+  padding-top: 15px;
+}
+.comment-item-details {
+  padding-top: 4px;
+  float: left;
+  width: 85%;
+}
+
+.comment-item-meta {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.comment-replies {
+  margin-left: 30px;
+}
+

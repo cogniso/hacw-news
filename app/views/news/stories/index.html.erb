@@ -1,30 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-10 col-md-offset-1">
- 	
+<div class="stories-list">
       <% @stories.each do |story| %>
-        <div class="story-box">
-          <div class="story-box-vote">    
-            <%= link_to "", votes_path(story_id: story.id, direction: :up ) , class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
-            <%= story.points %> 
-            <%= link_to "", votes_path(story_id: story.id, direction: :down ), class: "glyphicon glyphicon-chevron-down story-box-vote-arrow" %>
-          </div><!-- .story-box-vote -->
+        <div class="story-item">
+          <div class="story-item-voting">
+            <div>
+            <%= link_to "", votes_path(story_id: story.id, direction: :up ) , class: "glyphicon glyphicon-chevron-up story-item-vote-arrow" %>
+            <%= story.points %>
+            <%= link_to "", votes_path(story_id: story.id, direction: :down ), class: "glyphicon glyphicon-chevron-down story-item-vote-arrow" %>
+          </div>
+          </div><!-- .story-item-vote -->
 
-			    <a href="#">
-				     <img class="story-box-image" src="<%= story.image %>"/>
-			    </a>
-
-          <div class="story-box-details">           
+          <div class="story-item-details">
+            <a href="<%= story_path(story) %>">
+              <img class="story-item-image" src="<%= story.image %>"/>
+            </a>
             <h3>
-              <a href="<%= story_path(story) %>"><%= story.title %></a>
+              <%= link_to story.title, story %>
             </h3>
-            <a href="">Comments</a>
+            <%= link_to 'Comments', story_path(story, anchor: 'comments') %>
 
             <strong>Submited:</strong> <%= time_ago_in_words(story.created_at) %> ago
-          </div><!-- .story-box-details -->	
-        </div><!-- .story-box -->
+          </div><!-- .story-item-details -->
+        </div><!-- .story-item -->
       <% end %>
-
-    </div><!-- .col-sm-10 -->	
-  </div><!-- .row -->
-</div><!-- .container -->
+</div><!-- stories-list -->

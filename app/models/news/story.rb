@@ -13,7 +13,7 @@
 
 module News
   class Story < ActiveRecord::Base
-    has_many :comments
+    has_many :comments, -> { where(parent_id: nil) }
 
     validates :url, :title, presence: true
 

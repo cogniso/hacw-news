@@ -17,12 +17,13 @@
 
   <%= form_for @story.comments.build, html:{ class: 'story-comment-form'} do |f| %>
     <%= f.hidden_field :story_id %>
-    <%= f.text_area :body, placeholder: "Enter your comment here.", class: 'comment-text-area col-sm-6 col-sm-offset-3'%>
-    <%= f.submit 'Add comment', class: 'btn btn-success add-comment-btn col-sm-6 col-sm-offset-3' %>
+    <%= f.text_area :body, placeholder: "Comment on this story." %>
+
+    <%= f.submit 'Add comment', class: 'btn btn-primary' %>
   <% end %>
 
   <div class="comments-list">
-    <% @story.comments.order('points DESC').each do |comment| %>
+    <% @story.comments.roots.order('points DESC').each do |comment| %>
     <%= render comment %>
     <% end %>
   </div> <!-- .comments-list -->

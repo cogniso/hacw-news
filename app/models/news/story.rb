@@ -15,7 +15,7 @@ require 'uri'
 
 module News
   class Story < ActiveRecord::Base
-    has_many :comments, -> { where(parent_id: nil) }
+    has_many :comments
 
     validates :url, :title, presence: true
     validate :validate_url

@@ -20,9 +20,9 @@
             <h3>
               <%= link_to story.title, story %>
             </h3>
-            <%= link_to pluralize(story.comments.count, 'comment'), story_path(story, anchor: 'comments') %>
+            <%= link_to pluralize(story.comments.count, 'comment'), story_path(story, anchor: 'comments') %>. 
 
-            Submited: <%= time_ago_in_words(story.created_at) %> ago
+            Submitted <%= time_ago_in_words(story.created_at) %> ago
           </div><!-- .story-item-details -->
         </div><!-- .story-item -->
       <% end %>

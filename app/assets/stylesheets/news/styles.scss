@@ -55,3 +55,77 @@ body {
 	}
 }
 
+// Comments
+
+.story-header {
+	text-align: center;
+	a {
+		display: block;
+		margin: 25px;
+	}
+}
+.comment-item{
+	background: white;
+	&-voting {
+		display: inline-block;
+  		vertical-align: middle;
+		text-align: center;
+		width: 40px;
+		padding: 10px;
+		&-reply {
+			display: inline-block;
+  			vertical-align: middle;
+			text-align: center;
+			width: 20px;
+		}
+	}
+
+	&-reply-list{
+		display: inline-block;
+		margin-left: 10px;
+	}
+	a{
+		vertical-align: middle;
+	}
+	
+	.story-meta {
+		margin-top: 10px;
+	}
+
+	&-meta {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 20px;
+	}
+	&-reply{
+		border-left: 2px solid grey;
+		margin-top: 20px;
+		margin-left: 35px;
+		padding-left: 10px;
+	}
+	ul {
+		padding-left: 5px;
+	}
+}
+
+.label-info {
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

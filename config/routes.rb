@@ -4,8 +4,9 @@ News::Engine.routes.draw do
   get 'submit'=>'stories#new'
   get 'new' => 'stories#new'
   get 'comments' => 'stories#comments'
- 
-  resources :stories do
-    get :vote, on: :member
-  end
+
+  resources :stories
+
+  # resources :votes, only: [:create]
+  get '/votes'=> 'votes#create', as: :votes
 end

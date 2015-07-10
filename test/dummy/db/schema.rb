@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150626072338) do
+ActiveRecord::Schema.define(version: 20150710101552) do
+
+  create_table "news_comments", force: :cascade do |t|
+    t.integer  "story_id"
+    t.text     "body"
+    t.integer  "points",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "news_stories", force: :cascade do |t|
     t.string   "title"

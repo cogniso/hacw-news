@@ -13,13 +13,15 @@
 
 module News
   class Story < ActiveRecord::Base
+    has_many :comments
+
     validates :url, :title, presence: true
 
     def vote!(direction)
-      change = case direction
+      change = case direction.to_sym
       when :up then 1
       when :down then -1
-      else return
+      else "Unexpected vote direciton, must be up or down."
       end
 
       update_attribute(:points, points + change)

@@ -1,1 +1,33 @@
-<h1><%= @story.title %></h1>
+
+<div class="container">
+  <div class="story-header">
+    <div class="story-voting">
+      <%= link_to 'Up', '#' %>
+      <%= @story.points %>
+      <%= link_to 'Down', '#' %>
+    </div>
+
+    <%= image_tag @story.image, alt: @story.title %>
+    <h1><%= link_to @story.title, @story.url %></h1>
+
+    <div class="story-meta">
+      Submitted <%= time_ago_in_words @story.created_at %> ago.
+    </div>
+  </div><!-- story-header -->
+
+  <div class="comments-list">
+    <% @story.comments.order('points DESC').each do |comment| %>
+    <div class="comment-item">
+      <div class="comment-item-voting">
+        <%= link_to 'Up', votes_path(comment_id: comment.id, direction: :up) %>
+        <%= link_to 'Down', votes_path(comment_id: comment.id, direction: :down) %>
+      </div>
+
+      <div class="comment-item-meta">
+        <%= comment.points %> points <%= time_ago_in_words(comment.created_at) %> ago
+      </div>
+      <%= simple_format comment.body %>
+    </div>
+    <% end %>
+  </div><!-- .comments-list -->
+</div><!-- container -->

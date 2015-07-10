@@ -14,34 +14,28 @@ module News
       @story = Story.find(params[:id])
     end
 
-    def comment
-    end
-
-    def vote
-      direction = params[:direction].downcase.to_sym
-      unless [:up,:down].include? direction
-        raise "Vote must be either up or down"
-      end
-
-      @story = Story.find(params[:id])
-      @story.vote!(direction)
-      redirect_to story_path(@story)
-    end
-
     # Creates a few random stories to get us going
     def seed
+      Story.delete_all
+      Comment.delete_all
       20.times do |n|
-        Story.create!(
+        story = Story.create!(
           title: Faker::Lorem.sentence,
           url: Faker::Internet.url,
           points: rand(-100..100),
           image: Faker::Avatar.image,
           created_at: Faker::Time.backward(14),
         )
-      end
-    end
 
-    
+        rand(0..10).times do |x|
+          story.comments.create!(
+            body: Faker::Lorem.paragraph(2),
+            points: rand(-100..100),
+          )
+        end
+      end
+      redirect_to root_path
+    end
   end
 end
 

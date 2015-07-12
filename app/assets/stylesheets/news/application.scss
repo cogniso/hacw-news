@@ -12,5 +12,9 @@
  *
  *= require_self
  */
+// These two lines include the bootstrap code
+// Once they are included, we can access bootstrap variables and mixins
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import 'base';
 @import 'stories';

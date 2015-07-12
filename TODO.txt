@@ -3,3 +3,8 @@
 * Include the comment count on the stories#show page
 * Style the comment form and wrap the controls in bootstrap
   form classes if needed.
+
+
+- Get rid of underlines on story#show links
+- Put the comment count in a HACW color.  See branding guidelines in dropbox. 
+

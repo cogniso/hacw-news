@@ -22,6 +22,8 @@ Gem::Specification.new do |s|
   s.add_dependency "faker"
   s.add_dependency "awesome_nested_set"
   s.add_dependency "bootstrap-sass"
+  s.add_dependency "friendly_id"
+  s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
 end

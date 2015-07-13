@@ -1,7 +1,8 @@
 <div class="container">
   <div class="story-header">
     <%= image_tag @story.image, alt: @story.title %>
-    <%= link_to '', '#', class: "glyphicon glyphicon-chevron-up story-box-vote-arrow" %>
+
+    <%= vote_link_for @story, :up %>
 
     <h1><%= link_to @story.title, @story.url %></h1>
 
@@ -17,9 +18,9 @@
 
   <%= form_for @story.comments.build, html:{ class: 'story-comment-form'} do |f| %>
     <%= f.hidden_field :story_id %>
-    <%= f.text_area :body, placeholder: "Comment on this story." %>
+    <%= f.text_area :body, placeholder: "Comment on this story.", id: 'story_comment_body' %>
 
-    <%= f.submit 'Add comment', class: 'btn btn-primary' %>
+    <%= f.submit 'Add comment', class: 'btn btn-primary', id: "story_comment_submit" %>
   <% end %>
 
   <div class="comments-list">

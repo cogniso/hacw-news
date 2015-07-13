@@ -7,6 +7,7 @@ News::Engine.routes.draw do
   resources :stories
   resources :comments, only: [:new, :create]
 
-  # resources :votes, only: [:create]
-  get '/votes'=> 'votes#create', as: :votes
+  resources :votes, only: [:create] do
+    get '/'=>'votes#create'
+  end
 end

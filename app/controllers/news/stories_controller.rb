@@ -7,7 +7,7 @@ module News
     end
 
     def show
-      @story = Story.find(params[:id])
+      @story = Story.friendly.find(params[:id])
     end
 
     def new

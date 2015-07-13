@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150710173012) do
+ActiveRecord::Schema.define(version: 20150712154833) do
 
   create_table "news_comments", force: :cascade do |t|
     t.integer  "story_id"
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(version: 20150710173012) do
     t.string   "submitter_name"
     t.string   "submitter_email"
     t.boolean  "approved",        default: false
+    t.string   "slug"
   end
+
+  add_index "news_stories", ["slug"], name: "index_news_stories_on_slug", unique: true
 
 end

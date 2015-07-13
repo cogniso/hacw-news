@@ -31,6 +31,9 @@ module News
       errors.add :url, 'is not a valid URL' unless valid
     end
 
+    extend FriendlyId
+    friendly_id :title, use: [:slugged]
+
 
     def vote!(direction)
       change = case direction.to_sym

@@ -2,28 +2,24 @@
   <div class="stories-actions" style="margin-bottom: 20px; text-align: center">
     <%= link_to 'Submit a story', new_story_path, class: 'btn btn-primary' %>
   </div>
-    
-      <% @stories.each do |story| %>
-        <div class="story-item">
-          <div class="story-item-voting">
-            <div>
-            <%= link_to "", votes_path(story_id: story.id, direction: :up ) , class: "glyphicon glyphicon-chevron-up story-item-vote-arrow" %>
-            <%= story.points %>
-            <%= link_to "", votes_path(story_id: story.id, direction: :down ), class: "glyphicon glyphicon-chevron-down story-item-vote-arrow" %>
-          </div>
-          </div><!-- .story-item-vote -->
 
-          <div class="story-item-details">
-            <a href="<%= story_path(story) %>">
-              <img class="story-item-image" src="<%= story.image %>"/>
-            </a>
-            <h3>
-              <%= link_to story.title, story %>
-            </h3>
-            <%= link_to pluralize(story.comments.count, 'comment'), story_path(story, anchor: 'comments') %>. 
+  <% @stories.each do |story| %>
+    <div class="story-item">
+      <div class="story-item-voting">
+        <%= vote_link_for story, :up %>
+        <%= story.points %>
+        <%= vote_link_for story, :down %>
+      </div><!-- .story-item-vote -->
 
-            Submitted <%= time_ago_in_words(story.created_at) %> ago
-          </div><!-- .story-item-details -->
-        </div><!-- .story-item -->
-      <% end %>
+      <div class="story-item-details">
+        <a href="<%= story_path(story) %>">
+          <img class="story-item-image" src="<%= story.image %>"/>
+        </a>
+        <h3><%= link_to story.title, story %></h3>
+
+        <%= link_to pluralize(story.comments.count, 'comment'), story_path(story, anchor: 'comments') %>.
+        Submitted <%= time_ago_in_words(story.created_at) %> ago
+      </div><!-- .story-item-details -->
+    </div><!-- .story-item -->
+  <% end %>
 </div><!-- stories-list -->

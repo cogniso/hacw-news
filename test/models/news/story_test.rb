@@ -55,5 +55,11 @@ module News
       @story.vote!(:down)
       assert_equal @story.points, 9
     end
+
+    test "it generates a slug on save" do
+      @story.title = "A title"
+      @story.save!
+      assert_equal 'a-title', @story.slug
+    end
   end
 end

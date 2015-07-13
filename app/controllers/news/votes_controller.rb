@@ -2,13 +2,14 @@ module News
   class VotesController < ApplicationController
     def create
       if params[:comment_id]
-        @comment = Comment.find(params[:comment_id])
-        @comment.vote! params[:direction]
-        redirect_to @comment.story
+        @object = Comment.find(params[:comment_id])
       elsif params[:story_id]
-        @story = Story.find(params[:story_id])
-        @story.vote! params[:direction]
-        redirect_to @story
+        @object = Story.find(params[:story_id])
+      end
+      @object.vote! params[:direction]
+      respond_to do |format|
+        format.html { redirect_to(@object.try(:story) || @object) }
+        format.json { render json: { points: @object.points } }
       end
     end
   end

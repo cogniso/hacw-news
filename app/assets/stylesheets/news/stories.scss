@@ -59,15 +59,20 @@
 
 .story-header {
   text-align: center;
+  h1 {
+    color: $Slightly-desaturated-blue;
+  }
 
   a {
     display: block;
     margin: 25px;
+    text-decoration: none;
   }
 
   .label-story-points {
     font-size: 18px;
     margin-top: 20px;
+    background-color: $red;
   }
 
   .story-meta {
@@ -89,6 +94,10 @@
   .btn {
     margin-top: 10px;
     margin-bottom: 15px;
+    &-add-comment {
+      background-color: $dark-blue;
+      color: #fff;
+    }
   }
 
   textarea {

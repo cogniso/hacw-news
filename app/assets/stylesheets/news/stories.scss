@@ -50,6 +50,15 @@
 
 .story-item-details {
   overflow: auto;
+  a {
+    text-decoration: none;
+  }
+  &-comment-count {
+    color: $brand-red;
+     &:hover {
+      color: $brand-dark-range;
+    }
+  }
 }
 
 
@@ -60,7 +69,7 @@
 .story-header {
   text-align: center;
   h1 {
-    color: $Slightly-desaturated-blue;
+    color: $brand-slightly-desaturated-blue;
   }
 
   a {
@@ -72,7 +81,7 @@
   .label-story-points {
     font-size: 18px;
     margin-top: 20px;
-    background-color: $red;
+    background-color: $brand-red;
   }
 
   .story-meta {
@@ -95,7 +104,7 @@
     margin-top: 10px;
     margin-bottom: 15px;
     &-add-comment {
-      background-color: $dark-blue;
+      background-color: $brand-dark-blue;
       color: #fff;
     }
   }

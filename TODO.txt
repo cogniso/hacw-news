@@ -5,6 +5,6 @@
   form classes if needed.
 
 
-- Get rid of underlines on story#show links
-- Put the comment count in a HACW color.  See branding guidelines in dropbox. 
+* Get rid of underlines on story#show links
+* Put the comment count in a HACW color.  See branding guidelines in dropbox. 
 
